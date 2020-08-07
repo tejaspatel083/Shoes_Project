@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyCartPage"></activity>
-        <activity android:name=".ShoeDetails" />
+        <activity android:name="com.example.designshoes.MyCartPage"></activity>
+        <activity android:name="com.example.designshoes.ShoeDetails" />
         <activity android:name=".HomePage" />
         <activity
             android:name=".ForgotPassword"
