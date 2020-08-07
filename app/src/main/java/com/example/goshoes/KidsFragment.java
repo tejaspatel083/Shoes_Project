@@ -38,12 +38,12 @@ public class KidsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //Intent intent = new Intent(getContext(),ShoeDetails.class);
-                //intent.putExtra("name",kidsShoesNames[position]);
-                //intent.putExtra("image",kidsShoesImages[position]);
-                //intent.putExtra("price",kidsShoesPrice[position]);
-                //intent.putExtra("category",Category);
-                //startActivity(intent);
+                Intent intent = new Intent(getContext(),ShoeDetails.class);
+                intent.putExtra("name",kidsShoesNames[position]);
+                intent.putExtra("image",kidsShoesImages[position]);
+                intent.putExtra("price",kidsShoesPrice[position]);
+                intent.putExtra("category",Category);
+                startActivity(intent);
             }
 
         });
