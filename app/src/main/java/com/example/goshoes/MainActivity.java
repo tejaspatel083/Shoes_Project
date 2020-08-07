@@ -78,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 if (email.getText().toString().trim().length() == 0)
                 {
                     email.setError("Email Id Required");
-                    //Toast.makeText(MainActivity.this,"Enter Email",Toast.LENGTH_LONG).show();
-                    Toast toast = Toast.makeText(MainActivity.this,"Enter Email",Toast.LENGTH_LONG);
+                     Toast toast = Toast.makeText(MainActivity.this,"Enter Email",Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
                 }
@@ -100,7 +99,9 @@ public class MainActivity extends AppCompatActivity {
                     password.setError(null);Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
-                    startActivity(new Intent(MainActivity.this,HomePage.class));
+                    Intent intent = new Intent(MainActivity.this,HomePage.class);
+                    startActivity(intent);
+                    progressDialog.dismiss();
 
 
                 }
