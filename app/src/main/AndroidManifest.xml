@@ -11,13 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage"></activity>
-        <activity android:name=".ForgotPassword"
-            android:label="Forgot Password"/>
-        <activity android:name=".CreateAccount"
-            android:label="Create Account"/>
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MyCartPage"></activity>
+        <activity android:name=".ShoeDetails" />
+        <activity android:name=".HomePage" />
+        <activity
+            android:name=".ForgotPassword"
+            android:label="Forgot Password" />
+        <activity
+            android:name=".CreateAccount"
+            android:label="Create Account" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
