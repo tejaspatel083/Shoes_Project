@@ -96,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.setMessage("Logging in...");
                     progressDialog.show();
                     email.setError(null);
-                    password.setError(null);Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
+                    password.setError(null);
+                    Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
                     Intent intent = new Intent(MainActivity.this,HomePage.class);

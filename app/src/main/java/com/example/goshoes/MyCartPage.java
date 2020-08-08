@@ -29,7 +29,7 @@ public class MyCartPage extends AppCompatActivity {
         Intent intent = getIntent();
         final String received_Name =  intent.getStringExtra("shoe_name");
         final int received_Image = intent.getIntExtra("shoe_image",0);
-        String received_Price =  intent.getStringExtra("shoe_price");
+        final String received_Price =  intent.getStringExtra("shoe_price");
 
 
         btn1 = findViewById(R.id.minusbtn);
@@ -64,6 +64,19 @@ public class MyCartPage extends AppCompatActivity {
         shoe_price.setText(received_Price);
         brand_name.setText(received_Name);
         cart_imageview.setImageResource(received_Image);
+
+        checkoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MyCartPage.this,PaymentOptions.class);
+                intent.putExtra("shoe_name",received_Name);
+                intent.putExtra("shoe_image",received_Image);
+                intent.putExtra("shoe_price",received_Price);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

@@ -110,7 +110,7 @@
         android:id="@+id/checkout"
         android:background="@drawable/button_background"
         android:text="Checkout"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="#18212A"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"/>
