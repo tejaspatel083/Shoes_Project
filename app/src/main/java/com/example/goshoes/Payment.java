@@ -29,13 +29,12 @@ public class Payment extends AppCompatActivity {
         cardno = findViewById(R.id.card_number);
         mm = findViewById(R.id.expiry_month);
         yy = findViewById(R.id.expiry_year);
+        cvv = findViewById(R.id.cvv_number);
 
         payContinue = findViewById(R.id.make_payment);
 
         Intent intent = getIntent();
-        final String received_Name =  intent.getStringExtra("shoe_name");
-        final int received_Image = intent.getIntExtra("shoe_image",0);
-        final String received_Price =  intent.getStringExtra("shoe_price");
+        final String s =  intent.getStringExtra("shoe_quantity");
 
 
         payContinue.setOnClickListener(new View.OnClickListener() {
@@ -45,13 +44,6 @@ public class Payment extends AppCompatActivity {
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
 
-                Intent intent = new Intent(Payment.this,PayConfirm.class);
-                intent.putExtra("shoe_name",received_Name);
-                intent.putExtra("shoe_image",received_Image);
-                intent.putExtra("shoe_price",received_Price);
-                startActivity(intent);
-                /*
-
                 if (cardno.getText().toString().trim().length() == 0 || cardname.getText().toString().trim().length() == 0 || mm.getText().toString().trim().length() == 0 || yy.getText().toString().trim().length() == 0 || cvv.getText().toString().trim().length() == 0 )
                 {
                     Toast toast = Toast.makeText(Payment.this,"Enter All Details",Toast.LENGTH_LONG);
@@ -60,14 +52,14 @@ public class Payment extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent intent = new Intent(Payment.this,PayConfirm.class);
-                    intent.putExtra("shoe_name",received_Name);
-                    intent.putExtra("shoe_image",received_Image);
-                    intent.putExtra("shoe_price",received_Price);
+                    Intent intent = new Intent(Payment.this, PayConfirm.class);
+                    intent.putExtra("shoe_quantity",s);
                     startActivity(intent);
                 }
 
-                 */
+
+
+
             }
         });
     }
