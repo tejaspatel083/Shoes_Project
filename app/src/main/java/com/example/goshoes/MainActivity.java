@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
 
-        /*
+
 
         if (firebaseUser != null)
         {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        */
+
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
