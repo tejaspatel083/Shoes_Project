@@ -52,12 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if (firebaseUser != null)
-        {
 
-            startActivity(new Intent(MainActivity.this,HomePage.class));
-            finish();
-        }
 
 
 

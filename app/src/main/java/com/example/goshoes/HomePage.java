@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -106,6 +107,27 @@ public class HomePage extends AppCompatActivity {
             return true;
         }
 
+
+        int id = item.getItemId();
+
+        switch (id)
+        {
+
+            case R.id.cart:
+
+                startActivity(new Intent(HomePage.this,MyCartPage.class));
+                break;
+        }
+
+
+
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.option_menu,menu);
+        return true;
     }
 }
