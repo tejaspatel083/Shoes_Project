@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "307621810582",
-    "firebase_url": "https://goshoes-97da0.firebaseio.com",
-    "project_id": "goshoes-97da0",
-    "storage_bucket": "goshoes-97da0.appspot.com"
+    "project_number": "385855121222",
+    "firebase_url": "https://goshoes-6976c.firebaseio.com",
+    "project_id": "goshoes-6976c",
+    "storage_bucket": "goshoes-6976c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:307621810582:android:50fc74ddb7f60d2fdccdb7",
+        "mobilesdk_app_id": "1:385855121222:android:4e7c169d5606479d9d6747",
         "android_client_info": {
           "package_name": "com.example.goshoes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "307621810582-dn1aegrk87fpbjpqm7de5k04gtsbtnet.apps.googleusercontent.com",
+          "client_id": "385855121222-l7ii9sh8rb8lc5hi0n3r0crdt00njst8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBF3MAY5GK8bGGuczcK7-jZS-WxHYnkI8s"
+          "current_key": "AIzaSyAhJuJjeGOGZ_c3P2TqWiuFX47Fh4OPWIg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "307621810582-dn1aegrk87fpbjpqm7de5k04gtsbtnet.apps.googleusercontent.com",
+              "client_id": "385855121222-l7ii9sh8rb8lc5hi0n3r0crdt00njst8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

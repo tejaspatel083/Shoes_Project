@@ -22,6 +22,7 @@ public class ForgotPassword extends AppCompatActivity {
 
     private EditText forgotpwd;
     private Button submitbtn;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,8 @@ public class ForgotPassword extends AppCompatActivity {
 
         forgotpwd = findViewById(R.id.ForgotEmail);
         submitbtn = findViewById(R.id.ForgotSubmitBtn);
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +55,28 @@ public class ForgotPassword extends AppCompatActivity {
                 else
                 {
 
-                    Toast toast = Toast.makeText(ForgotPassword.this,"Password Reset Email sent",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL,0,0);
-                    toast.show();
+                    firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful())
+                            {
 
-                    Intent i = new Intent(ForgotPassword.this,MainActivity.class);
-                    startActivity(i);
+                                Toast toast = Toast.makeText(ForgotPassword.this,"Password Reset Email sent",Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL,0,0);
+                                toast.show();
 
+                                Intent i = new Intent(ForgotPassword.this,MainActivity.class);
+                                startActivity(i);
+                            }
+                            else
+                            {
+                                Toast toast = Toast.makeText(ForgotPassword.this,"Enter Registered Email",Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL,0,0);
+                                toast.show();
 
+                            }
+                        }
+                    });
                 }
 
             }
